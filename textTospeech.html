@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>say</button>
+</body>
+<script>
+       let say=document.querySelector("button")
+       say.addEventListener("click", function() {
+        // Create a .new SpeechSynthesisUtterance object
+        const message = new SpeechSynthesisUtterance();
+        
+        // Set the text to be spoken
+        message.text = "Hello World!";
+        
+        // Get the speech synthesis object
+        const speechSynthesis = window.speechSynthesis;
+        
+        // Start speaking
+        speechSynthesis.speak(message);
+    });
+</script>
+</html>
